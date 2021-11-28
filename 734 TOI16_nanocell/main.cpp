@@ -1,3 +1,6 @@
+/*
+ * Algorithm: Prime factorization, Circular prefix sum, Maximum subarray sum
+ */
 #include <iostream>
 #include <vector>
 #include <numeric>
@@ -21,6 +24,7 @@ int main() {
         cout << 557789638;
         return 0;
     }
+    // prime factorization
     vector<int> prime;
     int kk = k;
     for (int i = 2; i <= sqrt(kk); i++) {
@@ -37,6 +41,7 @@ int main() {
             cell[j] = 1;
         }
     }
+    // prefix sum
     for (int i = 0; i < k; i++) {
         if (!cell[i]) cell[i] = -1;
         pcell[i + 1] = pcell[i] + cell[i];
@@ -48,11 +53,12 @@ int main() {
     auto sum = [&](int l, int r) {
         return pcell[r] - pcell[l];
     };
+    // circular prefix sum
     for (int i = 1; i < n; i++) {
         int l = pos[i - 1] + 1, r = pos[i];
         energy[i] = ((r / k) - (l + k) / k) * sum(0, k) + sum(l % k, k) + sum(0, (r % k) + 1);
     }
-    // max sum subarray
+    // maximum subarray sum
     auto solve = [&]() {
         int cur = cell[pos[0] % k] + energy[1], mx = cur;
         for (int i = 1; i < n - 1; i++) {

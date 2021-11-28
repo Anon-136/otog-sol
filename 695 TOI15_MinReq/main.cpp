@@ -1,3 +1,6 @@
+/*
+ * Algorithm: Permutation, Binary search jump on prefix sum, Greedy
+ */
 #include <iostream>
 #include <vector>
 #include <utility>

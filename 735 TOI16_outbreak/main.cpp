@@ -1,3 +1,6 @@
+/*
+ * Algorithm: Complex simulation using priority_queue(heap)
+ */
 #include <iostream>
 #include <vector>
 #include <queue>

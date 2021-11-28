@@ -1,3 +1,6 @@
+/*
+ * Algorithm: Inorder expression evaluation using stack
+ */
 #include <iostream>
 #include <stack>
 #include <string>

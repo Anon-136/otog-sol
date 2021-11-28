@@ -1,3 +1,6 @@
+/*
+ * Algorithm: Math LCM, Branch and bound
+ */
 #include <iostream>
 #include <stack>
 #include <numeric>

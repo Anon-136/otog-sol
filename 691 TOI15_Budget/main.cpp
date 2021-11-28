@@ -1,3 +1,6 @@
+/*
+ * Algorithm: Kruskal (MST), Binary search
+ */
 #include <iostream>
 #include <vector>
 #include <algorithm>

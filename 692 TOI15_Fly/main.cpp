@@ -1,3 +1,6 @@
+/*
+ * Algorithm: Complex BFS
+ */
 #include <iostream>
 #include <vector>
 #include <utility>

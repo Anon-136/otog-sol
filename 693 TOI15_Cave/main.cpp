@@ -1,3 +1,7 @@
+/*
+ * Algorithm: Dijkstra with state, Convex
+ * (There is an alternative solution which is simpler)
+ */
 #include <iostream>
 #include <vector>
 #include <queue>

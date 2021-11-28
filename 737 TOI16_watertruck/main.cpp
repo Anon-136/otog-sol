@@ -1,3 +1,6 @@
+/*
+ * Algorithm: Directed acyclic graph technique (DAG), Graph manipulation, Dijkstra with state
+ */
 #include <iostream>
 #include <vector>
 #include <map>
@@ -30,7 +33,7 @@ int main() {
         deg[u] += 1;
         deg[v] += 1;
     }
-
+    // DAG
     queue<int> q;
     for (int u = 1; u < n; u++) {
         if (deg[u] == 1) {
@@ -49,6 +52,7 @@ int main() {
             }
         }
     }
+    // Find interection
     bool corner[N] = { true };
     int label[N]{};
     int l = 1;
@@ -58,6 +62,7 @@ int main() {
             label[u] = l++;
         }
     }
+    // Graph manipulation
     int e = 0;
     for (int u = 0; u < n; u++) if (corner[u]) {
         int sum_loop = 0;
@@ -92,6 +97,7 @@ int main() {
         }
         ans += sum_loop / 2;
     }
+    // Find shortest path
     vector<vector<int>> dist(l, vector<int>(1 << e, INF));
     priority_queue<Tuple, vector<Tuple>, greater<Tuple>> pq;
     pq.em(dist[0][0] = 0, 0, 0);

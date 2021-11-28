@@ -1,3 +1,6 @@
+/*
+ * Algorithm: Math equation, Prefix sum, Binary Search
+ */
 #include <iostream>
 #include <vector>
 #include <algorithm>
